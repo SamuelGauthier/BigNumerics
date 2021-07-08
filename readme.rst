@@ -5,8 +5,8 @@ BigNumerics
 .. image:: https://img.shields.io/badge/-C%2B%2B-blue
     :target: https://img.shields.io/badge/-C%2B%2B-blue
 
-.. image:: https://img.shields.io/badge/-The%20Unlicense%20-brightgreen 
-    :target: https://img.shields.io/badge/-The%20Unlicense%20-brightgreen 
+.. image:: https://img.shields.io/badge/license-wtfpl-brightgreen 
+    :target: https://img.shields.io/badge/license-wtfpl-brightgreen 
 
 .. contents:: Table of Contents
     :depth: 2
