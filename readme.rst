@@ -18,6 +18,14 @@ This repository contains header files for the :code:`BigInteger` and
 <https://cs.stanford.edu/~knuth/taocp.html>`_ Chapter 4.3 "Multiple-Precision
 Arithmetic".
 
+Implemented Operators
+=====================
+
+- Addition :code:`+`
+- Substraction :code:`-`
+- Multiplication :code:`*`
+- Division :code:`/`
+
 How to Use the Library
 ======================
 
