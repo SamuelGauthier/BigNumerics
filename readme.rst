@@ -47,7 +47,6 @@ BigInteger Usage Example
 
     int main(int argc, char *argv[])
     {
-
         BigNumerics::BigInteger A("123456789012345678901234567890");
         BigNumerics::BigInteger B("123456789012345678901234567890");
 
@@ -58,6 +57,31 @@ BigInteger Usage Example
 
         return 0;
     }
+
+BigDecimal Usage Example
+------------------------
+
+.. code:: c++
+
+    #include <iostream>
+    #include "BigDecimal.h"
+
+    #define endl "\n"
+
+    using namespace std;
+
+    int main(int argc, char *argv[])
+    {
+        BigNumerics::BigDecimal A("1234567890.12345678901234567890");
+        BigNumerics::BigDecimal B("1234567890.12345678901234567890");
+
+        cout << A + B << endl;
+        cout << A * B << endl;
+        cout << A - B << endl;
+        cout << A / B << endl;
+
+        return 0;
+    } 
 
 
 TODO
