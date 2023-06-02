@@ -191,7 +191,8 @@ public:
     BigInteger& operator*=(const BigInteger& rhs) {
         BigInteger result;
 
-        if (this->negative || rhs.negative) {
+        if ((this->negative && !rhs.negative) ||
+            (!this->negative && rhs.negative)) {
             result.negative = true;
         }
         else {
@@ -403,13 +404,19 @@ public:
     }
 
     friend inline bool operator<(const BigInteger& l, const BigInteger& r) {
-        if ((l.negative && !r.negative) ||
-            (l.integral.size() < r.integral.size())) {
+        if (l.negative && !r.negative) {
             return true;
         }
-        if ((!l.negative && r.negative) ||
-            (l.integral.size() > r.integral.size())) {
+        if (!l.negative && r.negative) {
             return false;
+        }
+        if (l.integral.size() != r.integral.size()) {
+            if (l.negative && r.negative) {
+                return l.integral.size() > r.integral.size();
+            }
+            if (!l.negative && !r.negative) {
+                return l.integral.size() < r.integral.size();
+            }
         }
 
         for (int i = (int)l.integral.size() - 1; i >= 0; i--) {
